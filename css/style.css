@@ -9,7 +9,8 @@
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
-	font-size: 3.5rem;
+  font-size: 3.5rem;
+  margin-top: 10px;
   }
 }
 
@@ -46,8 +47,9 @@
   font-weight: 600;
   text-decoration: none;
 }
-
-img{
-  height:42; 
-  width:42;
+.gif{
+  margin-top:170px;
+}
+.col-lg-4{
+  margin-top: 10px;
 }
