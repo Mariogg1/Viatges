@@ -70,7 +70,6 @@
 #login-form{
   display: none;
 }
-<<<<<<< HEAD
 
 /*footer*/
 #menu {
@@ -106,7 +105,7 @@
 /* Hover Slide */
 #menu ul li:hover :first-child {
   margin-top: -80px;
-=======
+}
 #myInput{
   margin-left: 1200px;
   background-position: 10px 12px;
@@ -115,5 +114,4 @@
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
->>>>>>> d71d06a2447dadd07327c774dd31fb72c638a82c
 }
