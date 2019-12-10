@@ -115,3 +115,11 @@
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
+/*buscador*/
+#submit{
+  margin-top: 5px;
+}
+#comment{
+  margin-right:500px;
+  width: 10%;
+}
