@@ -9,7 +9,7 @@ CREATE TABLE experiencies(
     titol VARCHAR (50) NOT NULL,
     dataPublicacio DATETIME DEFAULT CURRENT_TIMESTAMP,
     text VARCHAR(250) NOT NULL,
-    imatge LONGBLOB NOT NULL,
+    imatge VARCHAR(50) NOT NULL,
     lat FLOAT( 10, 6 ) NOT NULL ,
 	lng FLOAT( 10, 6 ) NOT NULL ,
     valoracionsPositives INT(4) DEFAULT 0,
@@ -31,7 +31,7 @@ CREATE TABLE usuaris(
 	primerCognom VARCHAR (20) NOT NULL,
     segonCognom VARCHAR (20) NOT NULL,
     correuElectronic VARCHAR(50) NOT NULL,
-    estat INT CHECK(estat=0 || estat=1)
+    estat INT CHECK(estat=0 || estat=1) DEFAULT 1
 );
 
 CREATE TABLE categories(

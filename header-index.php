@@ -38,7 +38,7 @@ if($_POST){
 
         ?>
         <button class="btn btn-secondary" id="login-select">Inicia Sessió</button>
-        <button class="btn btn-secondary">Registra't</button>
+        <a href="registre.php"><button class="btn btn-secondary">Registra't</button></a>
     </div>
     <div class="col-md-3" id="login-form">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -52,7 +52,7 @@ if($_POST){
             <input type="submit" class="btnSubmit" value="Login" name="submit" />
         </div>
         <div class="form-group">
-            <a href="#" class="ForgetPwd">Forget Password?</a>
+            <a href="registre.php" class="ForgetPwd">No tens compte?</a>
         </div>
         </form>
     </div>
