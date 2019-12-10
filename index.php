@@ -60,26 +60,55 @@
                       <button class="btn btn-secondary">Registra't</button>
                     </div>
                     <div class="col-md-3" id="login-form">
-                          <form>
+                          <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                               <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Your username *" value="" />
+                                  <input type="text" class="form-control" placeholder="Your username *" value="" name="nomUsuari"/>
                               </div>
                               <div class="form-group">
-                                  <input type="password" class="form-control" placeholder="Your password *" value="" />
+                                  <input type="password" class="form-control" placeholder="Your password *" value="" name="password" />
                               </div>
                               <div class="form-group">
-                                  <input type="submit" class="btnSubmit" value="Login" />
+                                  <input type="submit" class="btnSubmit" value="Login" name="submit" />
                               </div>
                               <div class="form-group">
                                   <a href="#" class="ForgetPwd">Forget Password?</a>
                               </div>
                           </form>
                       </div>
+                      <div class="col-md-3" id="benvinguda-header">
+                        <p>Benvingut <?php echo $nomUsuari ?></p>
+                      </div>
                   </nav>
                 </header>
 
                 
-                
+                <?php
+
+                  include_once 'login.php';
+
+                  if(isset($_POST['submit'])){
+                    if(!empty($_POST['nomUsuari']) && !empty($_POST['nomUsuari'])){
+                      $nomUsuari = htmlspecialchars($_POST['nomUsuari']);
+                      $password = $_POST['password'];
+
+                      $sql = "SELECT * FROM usuaris WHERE nomUsuari = '" . $nomUsuari . "' AND contrasenya = '" . $password . "'";
+                    
+                      $userLogin = mysqli_query($conexio, $sql);
+                      $compte = mysqli_num_rows($userLogin);
+
+                      if ($compte==1){
+                        $_SESSION['login_user_sys']=$nomUsuari; // Iniciant la sesió
+                      } else {
+                      //echo "L'usuari o la contrasenya son incorrectes.";	
+                      }
+                    }else{
+                      //echo "L'usuari o la contrasenya son incorrectes.";
+                    }
+                  }
+
+                ?>
+
+
                 <main role="main">
                   
                 
@@ -93,8 +122,6 @@
                     <!-- Three columns of text below the carousel -->
                     <div class="row">
                     <?php
-
-                      include_once 'login.php';
 
                       $sql = "SELECT * FROM experiencies ORDER BY ID DESC LIMIT 3";
 
