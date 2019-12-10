@@ -92,7 +92,7 @@ if($_POST){
         </div>
         <button type="submit" class="btn btn-default">Envia</button>
         </form>
-
+        <button type="button" class="btn btn-primary" onclick="location.href='index.php'">Torna a la pagina d'inici</button>
     </div>
     <div class="col-md-4"></div>
     </div>
