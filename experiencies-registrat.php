@@ -76,7 +76,7 @@
                   "<h2 class='featurette-heading'>" . 
                   $experiencia['titol'] . 
                   "</h2>
-                  <p class='lead'>" . 
+                  <p class='lead cortar-largo'>" . 
                   $experiencia['text'] . "</p>
                   <p>
                   </div>
@@ -92,7 +92,7 @@
                     "<h2 class='featurette-heading'>" . 
                     $experiencia['titol'] . 
                     "</h2>
-                    <p class='lead'>" . 
+                    <p class='lead cortar-largo'>" . 
                     $experiencia['text'] . "</p>
                     <p>
                     </div>

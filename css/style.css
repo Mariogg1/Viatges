@@ -67,6 +67,12 @@ html, body{
   overflow:hidden; 
 }
 
+.cortar-largo{
+  height:420px;
+  text-overflow:ellipsis;
+  overflow:hidden; 
+}
+
 .img-experiencia{
   width: 150px; 
   height: 150px; 
