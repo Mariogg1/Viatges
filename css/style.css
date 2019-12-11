@@ -18,6 +18,12 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
+html, body{
+  height: 100%;
+}
+.full-height {
+  height: 100%;
+}
 .login-form-1{
   padding: 5%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
@@ -73,11 +79,19 @@
 
 /*footer*/
 #menu {
-  height: 80px;
-  width: 730px;
+  height: 10px;
+  width: 630px;
   overflow: hidden;
-  margin: 50px auto;
+  margin: 10px auto;
   text-align: center;
+  text-justify: inter-word;
+  padding-bottom:70px;
+}
+footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 #menu ul li {
   float: left;
@@ -119,7 +133,24 @@
 #submit{
   margin-top: 5px;
 }
-#comment{
-  margin-right:500px;
-  width: 10%;
+/*header*/
+.fototitulo{
+  display:flex;
+  color: white;
+  font-size: 20px;
+}
+.losdos{
+  display:flex;
+  margin-top:90px;
+  margin-left: 140px;
+  font-size:50px;
+}
+.p{
+  margin-right:3px;
+}
+.e{
+  margin-left:3px;
+}
+.b{
+  color:white;
 }

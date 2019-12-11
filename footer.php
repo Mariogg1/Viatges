@@ -3,7 +3,7 @@
         <ul>
             <li>
                 <a href="#">Home</a>
-                <a href="#">See Us</a>
+                <a href="https://camp.iam.cat/">See Us</a>
             </li>
             <li>
                 <a href="#">About</a>

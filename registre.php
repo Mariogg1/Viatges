@@ -42,6 +42,7 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <title>Registre</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css\bootstrap.min.css">
 </head>
 <body>
@@ -96,6 +97,10 @@ if($_POST){
     </div>
     <div class="col-md-4"></div>
     </div>
+    <?php 
+        $cont = file_get_contents("footer.php"); 
+        echo $cont;
+    ?>
 </body>
 </html>
 
