@@ -102,7 +102,8 @@
                     $i++;
                 }
               }
-            ?>  
+            ?>
+            <button type="button" class="btn btn-primary" onclick="location.href='afegirExp.php'">Inclueix una experiencia</button>
             <!-- /END THE FEATURETTES -->
             <!-- FOOTER -->
             <?php 
