@@ -46,16 +46,10 @@ if($_POST){
     <link rel="stylesheet" href="css\bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <div class="col-md-2">
-                <img src="logo/logo.png" class="logo">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <?php 
+        $cont = file_get_contents("header.php"); 
+        echo $cont;
+      ?>
 
     <div class="row">
     <div class="col-md-4"></div>
