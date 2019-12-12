@@ -35,28 +35,37 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
       <div class="container marketing">
-      <button type="button" class="btn btn-primary" onclick="location.href='afegirExp.php'">Afegeix una experiencia</button>
+        <button type="button" class="btn btn-primary" onclick="location.href='afegirExp.php'">Afegeix una experiencia</button>
       <!-- Three columns of text below the carousel -->
-      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-        <h1>Llistat d'experiències</h1>
-        <script>
-          function myFunction() {
-            var input, filter, ul, li, a, i, txtValue;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            ul = document.getElementById("myUL");
-            li = ul.getElementsByTagName("li");
-            for (i = 0; i < li.length; i++) {
-              a = li[i].getElementsByTagName("a")[0];
-              txtValue = a.textContent || a.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-              } else {
-                li[i].style.display = "none";
+          <div class="botones">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+              <select class="selector" form="categories">
+                <option value="ninguno">Llistar per:</option>
+                <option value="data">Data</option>
+                <option value="puntuacio">Puntuació</option>
+              </select>
+           </div> 
+            <h1>Llistat d'experiències</h1>
+
+            <script>
+              function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                  a = li[i].getElementsByTagName("a")[0];
+                  txtValue = a.textContent || a.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                  } else {
+                    li[i].style.display = "none";
+                  }
+                }
               }
-            }
-          }
-        </script>
+            </script>
+        </div>
         <div class="wrapper fadeInDown">
           <div id="formContent">
         <!-- START THE FEATURETTES -->
@@ -104,6 +113,7 @@
                 }
               }
             ?>
+            <button type="button" class="btn btn-primary" onclick="location.href='index.php'">Torna a la pagina d'inici</button>
             <!-- /END THE FEATURETTES -->
             <!-- FOOTER -->
             <?php 
