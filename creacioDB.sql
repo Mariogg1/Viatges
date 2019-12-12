@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS viatges;
+DROP DATABASE IF EXISTS a14alerevagu_viatges;
 
-CREATE DATABASE viatges;
+CREATE DATABASE a14alerevagu_viatges;
 
-USE viatges;
+USE a14alerevagu_viatges;
 
 CREATE TABLE usuaris(
 	id INT(5) AUTO_INCREMENT PRIMARY KEY,
