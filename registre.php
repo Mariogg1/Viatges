@@ -1,6 +1,6 @@
 <?php
 
-include_once 'login.php';
+include_once 'conexioBD.php';
 
 if($_POST){
     

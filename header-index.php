@@ -5,7 +5,7 @@ if($_POST){
     $userName = htmlspecialchars($_POST['userName']);
     $contrasenya = htmlspecialchars($_POST['password']);
 
-    include_once 'login.php';
+    include_once 'conexioBD.php';
 
     $sql = "SELECT * FROM usuaris WHERE nomUsuari = '" . $userName . "' AND contrasenya = '" . $contrasenya . "'";
 

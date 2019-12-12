@@ -71,7 +71,7 @@
         <!-- START THE FEATURETTES -->
 
             <?php
-              include_once 'login.php';
+              include_once 'conexioBD.php';
               $sql = "SELECT * FROM experiencies ORDER BY ID";
               $experiencies = mysqli_query($conexio, $sql);
 

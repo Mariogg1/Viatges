@@ -39,7 +39,7 @@
           <!-- Three columns of text below the carousel -->
           <div class="row">
             <?php
-              include_once 'login.php';
+              include_once 'conexioBD.php';
               $sql = "SELECT * FROM experiencies ORDER BY ID DESC LIMIT 3";
               $experiencies = mysqli_query($conexio, $sql);
               foreach($experiencies as $experiencia){
