@@ -66,7 +66,8 @@ if(!$_GET){
             $experiencia['text'] .
             "<p>
             </div>
-            </div>";
+            </div>
+            <button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>";
             $i++;
     }
 }

@@ -72,71 +72,8 @@
 
             <?php
             include_once 'mostrar-experiencia.php';
-              /*include_once 'conexioBD.php';
-              $sql = "SELECT * FROM experiencies ORDER BY ID";
-              $experiencies = mysqli_query($conexio, $sql);
-
-              
-              $i = 0;
-              foreach($experiencies as $experiencia){
-                if($i % 2 == 0){
-                  echo "<hr class='featurette-divider'>" .
-                  "<div class='row featurette experiencia' id=" . $experiencia['id'] . ">" . 
-                  "<div class='col-md-7'>" . 
-                  "<h2 class='featurette-heading'>" . 
-                  $experiencia['titol'] . 
-                  "</h2>
-                  <p class='lead cortar-largo'>" . 
-                  $experiencia['text'] . "</p>
-                  <p>
-                  </div>
-                  <div class='col-md-5'>
-                  <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
-                  </div>
-                  </div>";
-                  $i++;
-                }else{
-                  echo "<hr class='featurette-divider'>" .
-                    "<div class='row featurette experiencia' id=" . $experiencia['id'] . ">" . 
-                    "<div class='col-md-7 order-md-2'>" . 
-                    "<h2 class='featurette-heading'>" . 
-                    $experiencia['titol'] . 
-                    "</h2>
-                    <p class='lead cortar-largo'>" . 
-                    $experiencia['text'] . "</p>
-                    <p>
-                    </div>
-                    <div class='col-md-5 order-md-1'>
-                    <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
-                    </div>
-                    </div>";
-                    $i++;
-                }
-              }*/
             ?>
-            <script>
-              document.getElementById("data").addEventListener("click", data);
-              function data(){
-               data =$("dataPublicacio").val();
-                var datos = new FormData();
-                datos.append("dataPublicacio", data);
-                $.ajax({
-                  url:"data.php",
-                  type: "POST"
-                });
-              });
-              document.getElementById("puntuacio").addEventListener("click", puntuacio);
-              function puntuacio(){
-               var exp =$("valoracionsPositives").val();
-                var experiencia = new FormExp();
-                experiencia.append("valoracionsPositives", exp);
-                $.ajax({
-                  url:"puntuacio.php",
-                  type: "POST"
-                });
-              });
-            </script>
-            <button type="button" class="btn btn-primary" onclick="location.href='index.php'">Torna a la pagina d'inici</button>
+            
             <!-- /END THE FEATURETTES -->
             <!-- FOOTER -->
             <?php 
@@ -144,8 +81,6 @@
               echo $cont;
             ?>
           </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    
   </body>
 </html>
