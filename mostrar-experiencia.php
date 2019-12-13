@@ -56,39 +56,18 @@ if(!$_GET){
 
     $i = 0;
     foreach($experiencies as $experiencia){
-        if($i % 2 == 0){
             echo "<hr class='featurette-divider'>" .
-            "<div class='row featurette experiencia' id=" . $experiencia['id'] . " onclick='showUser(this.id)'>" . 
-            "<div class='col-md-7'>" . 
+            "<div class='row featurette' id=" . $experiencia['id'] . ">" . 
+            "<div class='col-md-12'>" . 
             "<h2 class='featurette-heading'>" . 
             $experiencia['titol'] . 
             "</h2>
-            <p class='lead cortar-largo'>" . 
-            $experiencia['text'] . "</p>
-            <p>
-            </div>
-            <div class='col-md-5'>
-            <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
+            <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover; float: right'/>" . 
+            $experiencia['text'] .
+            "<p>
             </div>
             </div>";
             $i++;
-        }else{
-            echo "<hr class='featurette-divider'>" .
-            "<div class='row featurette experiencia' id=" . $experiencia['id'] . " onclick='showUser(this.id)'>" . 
-            "<div class='col-md-7 order-md-2'>" . 
-            "<h2 class='featurette-heading'>" . 
-            $experiencia['titol'] . 
-            "</h2>
-            <p class='lead cortar-largo'>" . 
-            $experiencia['text'] . "</p>
-            <p>
-            </div>
-            <div class='col-md-5 order-md-1'>
-            <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
-            </div>
-            </div>";
-            $i++;
-        }
     }
 }
 ?>
