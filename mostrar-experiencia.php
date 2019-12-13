@@ -21,7 +21,6 @@ if(!$_GET){
             "</h2>
             <p class='lead cortar-largo'>" . 
             $experiencia['text'] . "</p>
-            <p>
             </div>
             <div class='col-md-5'>
             <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
@@ -38,7 +37,6 @@ if(!$_GET){
             "</h2>
             <p class='lead cortar-largo'>" . 
             $experiencia['text'] . "</p>
-            <p>
             </div>
             <div class='col-md-5 order-md-1'>
             <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>

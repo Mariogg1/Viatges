@@ -18,8 +18,13 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
-html, body{
-  height: 100%;
+html{
+  min-height: 100%;
+  position: relative;
+}
+body{
+  margin: 0;
+  margin-bottom: 200px;
 }
 .full-height {
   height: 100%;
@@ -91,10 +96,11 @@ html, body{
   padding-bottom:70px;
 }
 footer{
-  position: relative;
-  left: 0;
+  background-color: #ddd;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  height: 200px;
 }
 #menu ul li {
   float: left;
@@ -124,13 +130,8 @@ footer{
   margin-top: -80px;
 }
 #myInput{
-  margin-left: 1200px;
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
 }
 /*buscador*/
 #submit{
@@ -159,7 +160,6 @@ footer{
 }
 /*experiencia-registrat*/
 .selector{
-  margin-left: 1200px;
   padding-left:10px;
   padding-right: 10px;
 }

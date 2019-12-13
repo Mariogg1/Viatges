@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="en">
+  <html lang="es">
     <head>
       <meta charset="utf-8">
       <title><?php if(isset($title)) echo $title; ?></title>
@@ -9,7 +9,6 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <!-- Scripts -->
       <script src="js/mostrar.js"></script>
-      <script src="js/documents.js"></script>
     </head>
     <body>
       <header>
@@ -19,7 +18,7 @@
       </div>
       <div class="col-md-7"></div>
         <?php 
-          if(isset($_SESSION)){
+          if(isset($_SESSION['login_user'])){
               include_once 'header-registrat.php';
           }else{
               include_once 'header-no-registrat.php';

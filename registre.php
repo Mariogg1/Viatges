@@ -91,10 +91,6 @@ if($_POST){
     </div>
     <div class="col-md-4"></div>
     </div>
-    <?php 
-        $cont = file_get_contents("footer.php"); 
-        echo $cont;
-    ?>
 </body>
 </html>
 

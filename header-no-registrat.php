@@ -1,3 +1,4 @@
+<script src="js/login.js"></script>
 <?php
 
 if($_POST){
@@ -14,7 +15,6 @@ if($_POST){
     if(mysqli_num_rows($usuariDB) == 1){
         session_start();
         $_SESSION['login_user']=$userName;
-        echo $_SESSION['login_user'];
         header("location: index.php");
     }else{
         header("location: index.php?login=failed");

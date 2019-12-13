@@ -22,11 +22,6 @@
           <!-- /.row -->
           <div class="wrapper fadeInDown">
             <div id="formContent">
-          <!-- FOOTER -->
-            <?php 
-              $cont = file_get_contents("footer.php"); 
-              echo $cont;
-            ?>
       </main>
       <!--
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
