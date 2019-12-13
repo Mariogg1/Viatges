@@ -24,6 +24,7 @@
       <meta name="theme-color" content="#563d7c">
       <!-- Custom styles for this template -->
       <link href="carousel.css" rel="stylesheet">
+      <script src="js/mostrar.js"></script>
     </head>
     <body>
       <?php 
@@ -70,7 +71,8 @@
         <!-- START THE FEATURETTES -->
 
             <?php
-              include_once 'conexioBD.php';
+            include_once 'mostrar-experiencia.php';
+              /*include_once 'conexioBD.php';
               $sql = "SELECT * FROM experiencies ORDER BY ID";
               $experiencies = mysqli_query($conexio, $sql);
 
@@ -79,7 +81,7 @@
               foreach($experiencies as $experiencia){
                 if($i % 2 == 0){
                   echo "<hr class='featurette-divider'>" .
-                  "<div class='row featurette'>" . 
+                  "<div class='row featurette experiencia' id=" . $experiencia['id'] . ">" . 
                   "<div class='col-md-7'>" . 
                   "<h2 class='featurette-heading'>" . 
                   $experiencia['titol'] . 
@@ -95,7 +97,7 @@
                   $i++;
                 }else{
                   echo "<hr class='featurette-divider'>" .
-                    "<div class='row featurette'>" . 
+                    "<div class='row featurette experiencia' id=" . $experiencia['id'] . ">" . 
                     "<div class='col-md-7 order-md-2'>" . 
                     "<h2 class='featurette-heading'>" . 
                     $experiencia['titol'] . 
@@ -110,7 +112,7 @@
                     </div>";
                     $i++;
                 }
-              }
+              }*/
             ?>
             <script>
               document.getElementById("data").addEventListener("click", data);
