@@ -42,8 +42,7 @@
     </head>
     <body>
     <?php 
-        $cont = file_get_contents("header.php"); 
-        echo $cont;
+        include_once 'declaracio.php';
     ?>
         <div class="row">
             <div class="col-md-4"></div>

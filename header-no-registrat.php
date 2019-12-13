@@ -23,13 +23,6 @@ if($_POST){
 
 ?>
 
-<header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="col-md-2">
-        <img src="logo/logo.png" class="logo">
-    </div>
-    <div class="col-md-7"></div>
-    <div class="col-md-3" id="login-register">
         <?php
 
             if(isset($_GET['login']) && $_GET['login']=="failed"){
@@ -37,8 +30,10 @@ if($_POST){
             }
 
         ?>
+    <div class="col-md-3" id="login-register">
         <button class="btn btn-secondary" id="login-select">Inicia Sessió</button>
         <a href="registre.php"><button class="btn btn-secondary">Registra't</button></a>
+    </div>
     </div>
     <div class="col-md-3" id="login-form">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -48,8 +43,13 @@ if($_POST){
         <div class="form-group">
             <input type="password" class="form-control" placeholder="Your password *" value="" name="password" />
         </div>
-        <div class="form-group">
-            <input type="submit" class="btnSubmit" value="Login" name="submit" />
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="submit" class="btnSubmit btn-login-form" value="Login" name="submit" />
+            </div>
+            <div class="form-group col-md-6">
+                <input type="reset" class="btnSubmit btn-login-form" value="Cancel·la" id="login-cancela"/>
+            </div>
         </div>
         <div class="form-group">
             <a href="registre.php" class="ForgetPwd">No tens compte?</a>

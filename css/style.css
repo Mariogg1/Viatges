@@ -167,3 +167,7 @@ footer{
 .experiencia{
   cursor: pointer;
 }
+
+.btn-login-form{
+  width: 100%;
+}
