@@ -44,7 +44,7 @@
               $experiencies = mysqli_query($conexio, $sql);
               foreach($experiencies as $experiencia){
                 echo "<div class='col-lg-4'>" .
-                "<img class='img-experiencia' src='https://cdn.getyourguide.com/img/tour_img-1294407-146.jpg'>
+                "<img class='img-experiencia' src='img_experiencies/" . $experiencia['imatge'] . "' style='object-fit: cover'>
                 <h2>" . $experiencia['titol'] . "</h2>
                 <p class='cortar'>" . $experiencia['text'] . "</p>
                 <p><a class='btn btn-secondary' href='#' role='button'>Veure més</a></p>

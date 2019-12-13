@@ -65,7 +65,6 @@
                 }
               }
             </script>
-        </div>
         <div class="wrapper fadeInDown">
           <div id="formContent">
         <!-- START THE FEATURETTES -->
@@ -90,7 +89,7 @@
                   <p>
                   </div>
                   <div class='col-md-5'>
-                  <svg class='bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto' width='500' height='500' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 500x500'><title>Placeholder</title><rect width='100%' height='100%' fill='#eee'></rect><text x='50%' y='50%' fill='#aaa' dy='.3em'>500x500</text></svg>
+                  <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
                   </div>
                   </div>";
                   $i++;
@@ -106,7 +105,7 @@
                     <p>
                     </div>
                     <div class='col-md-5 order-md-1'>
-                    <svg class='bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto' width='500' height='500' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' focusable='false' role='img' aria-label='Placeholder: 500x500'><title>Placeholder</title><rect width='100%' height='100%' fill='#eee'></rect><text x='50%' y='50%' fill='#aaa' dy='.3em'>500x500</text></svg>
+                    <img src='img_experiencies/" . $experiencia['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
                     </div>
                     </div>";
                     $i++;
@@ -120,6 +119,7 @@
               $cont = file_get_contents("footer.php"); 
               echo $cont;
             ?>
+          </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
