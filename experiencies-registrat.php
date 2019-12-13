@@ -40,9 +40,9 @@
           <div class="botones">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
               <select class="selector" form="categories">
-                <option value="ninguno">Llistar per:</option>
-                <option value="data">Data</option>
-                <option value="puntuacio">Puntuació</option>
+                <option value disabled selected>Llistar per:</option>
+                <option value="data" id="data">Data</option>
+                <option value="puntuacio" id="puntuacio">Puntuació</option>
               </select>
            </div> 
             <h1>Llistat d'experiències</h1>
@@ -112,6 +112,28 @@
                 }
               }
             ?>
+            <script>
+              document.getElementById("data").addEventListener("click", data);
+              function data(){
+               data =$("dataPublicacio").val();
+                var datos = new FormData();
+                datos.append("dataPublicacio", data);
+                $.ajax({
+                  url:"data.php",
+                  type: "POST"
+                });
+              });
+              document.getElementById("puntuacio").addEventListener("click", puntuacio);
+              function puntuacio(){
+               var exp =$("valoracionsPositives").val();
+                var experiencia = new FormExp();
+                experiencia.append("valoracionsPositives", exp);
+                $.ajax({
+                  url:"puntuacio.php",
+                  type: "POST"
+                });
+              });
+            </script>
             <button type="button" class="btn btn-primary" onclick="location.href='index.php'">Torna a la pagina d'inici</button>
             <!-- /END THE FEATURETTES -->
             <!-- FOOTER -->
