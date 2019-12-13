@@ -3,6 +3,8 @@
     <head>
       <meta charset="utf-8">
       <title><?php if(isset($title)) echo $title; ?></title>
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
       <!-- Bootstrap -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- Style -->

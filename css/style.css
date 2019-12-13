@@ -1,69 +1,38 @@
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-  font-size: 3.5rem;
-  margin-top: 10px;
-  }
-}
-
-.login-container{
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
 html{
   min-height: 100%;
   position: relative;
+  font-family: 'Quicksand', sans-serif;
 }
+
 body{
   margin: 0;
   margin-bottom: 200px;
 }
-.full-height {
-  height: 100%;
+
+header{
+  margin-bottom: 20px;
 }
-.login-form-1{
-  padding: 5%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+
+.benvinguda{
+  color: white;
 }
-.login-form-1 h3{
-  text-align: center;
-  color: #333;
-}
-.login-container form{
-  padding: 10%;
-}
-.btnSubmit
-{
+
+.btnSubmit{
   width: 50%;
   border-radius: 1rem;
   padding: 1.5%;
   border: none;
   cursor: pointer;
 }
-.login-form-1 .btnSubmit{
-  font-weight: 600;
-  color: #fff;
-  background-color: #0062cc;
+
+.experiencias-min{
+  text-align: center;
 }
-.login-form-1 .ForgetPwd{
-  color: #0062cc;
-  font-weight: 600;
-  text-decoration: none;
-}
-.gif{
-  margin-top:170px;
-}
+
 /*index*/
 .cortar{
-  width:200px;
+  padding-left: 70px;
+  padding-right: 70px;
   height:150px;
   text-overflow:ellipsis;
   overflow:hidden; 
@@ -86,6 +55,15 @@ body{
 }
 
 /*footer*/
+footer{
+  background-color: #ddd;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+
 #menu {
   height: 10px;
   width: 630px;
@@ -95,13 +73,32 @@ body{
   text-justify: inter-word;
   padding-bottom:70px;
 }
-footer{
-  background-color: #ddd;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 200px;
+
+/*buscador*/
+#submit{
+  margin-top: 5px;
 }
+
+#myInput{
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+/*experiencia-registrat*/
+.selector{
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+.experiencia{
+  cursor: pointer;
+}
+
+.btn-login-form{
+  width: 100%;
+}
+
+/* Menú Footer */
 #menu ul li {
   float: left;
   margin: 0 5px;
@@ -129,45 +126,4 @@ footer{
 #menu ul li:hover :first-child {
   margin-top: -80px;
 }
-#myInput{
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-}
-/*buscador*/
-#submit{
-  margin-top: 5px;
-}
-/*header*/
-.fototitulo{
-  display:flex;
-  color: white;
-  font-size: 20px;
-}
-.losdos{
-  display:flex;
-  margin-top:90px;
-  margin-left: 140px;
-  font-size:50px;
-}
-.p{
-  margin-right:3px;
-}
-.e{
-  margin-left:3px;
-}
-.b{
-  color:white;
-}
-/*experiencia-registrat*/
-.selector{
-  padding-left:10px;
-  padding-right: 10px;
-}
 
-.experiencia{
-  cursor: pointer;
-}
-
-.btn-login-form{
-  width: 100%;
-}

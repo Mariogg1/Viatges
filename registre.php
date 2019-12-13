@@ -34,22 +34,9 @@ if($_POST){
         echo "Falten dades";
     }
 }else{
-
+ 
+        include_once 'declaracio.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Registre</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css\bootstrap.min.css">
-</head>
-<body>
-    <?php 
-        $cont = file_get_contents("header.php"); 
-        echo $cont;
-      ?>
 
     <div class="row">
     <div class="col-md-4"></div>
@@ -96,5 +83,6 @@ if($_POST){
 
 <?php
 }
+include_once 'footer.php';
 ?>
 

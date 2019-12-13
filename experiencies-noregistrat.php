@@ -10,7 +10,7 @@
               $sql = "SELECT * FROM experiencies ORDER BY ID DESC LIMIT 3";
               $experiencies = mysqli_query($conexio, $sql);
               foreach($experiencies as $experiencia){
-                echo "<div class='col-lg-4'>" .
+                echo "<div class='col-md-4 experiencias-min'>" .
                 "<img class='img-experiencia' src='img_experiencies/" . $experiencia['imatge'] . "' style='object-fit: cover'>
                 <h2>" . $experiencia['titol'] . "</h2>
                 <p class='cortar'>" . $experiencia['text'] . "</p>

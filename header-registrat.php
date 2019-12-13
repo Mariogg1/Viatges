@@ -4,7 +4,7 @@
             </button>
         <div class="col-md-7"></div>
         <div class="col-md-1">
-            <p class="b">BENVINGUT! <?php echo $_SESSION['login_user'] ?></p>
+            <p class="benvinguda">BENVINGUT! <?php echo $_SESSION['login_user'] ?></p>
             <a href="logout.php">Sortir</a>
         </div>
     </nav>
