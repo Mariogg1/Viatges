@@ -10,7 +10,7 @@
       <div class="col-md-6"></div>
       <div class="col-md-3">
         <div class="row">
-          <form action="buscador.php" method="POST">
+          <form action="javascript:void(0)" method="POST" onsubmit="buscar(this.palabra.value)">
             <input type="text" name="palabra" placeholder="Cerca">
             <input type="submit" name="buscador" value="Buscar">
           </form>
