@@ -12,6 +12,10 @@ body{
 header{
   margin-bottom: 20px;
 }
+.cabecera2{
+  color: white;
+  font-size: 50px;
+}
 
 .benvinguda{
   color: white;
@@ -28,7 +32,9 @@ header{
 .experiencias-min{
   text-align: center;
 }
-
+#boton3{
+  margin-top: 10px;
+}
 /*index*/
 .cortar{
   padding-left: 70px;

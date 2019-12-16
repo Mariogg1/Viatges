@@ -18,7 +18,11 @@
       <div class="col-md-2">
           <a href="index.php"><img src="logo/logo.png" class="logo"></a>
       </div>
-      <div class="col-md-7"></div>
+      <div class="col-md-7">
+        <div class="cabecera2">
+          <p>Pedralbes experiences</p>
+        </div>
+      </div>
         <?php 
           if(isset($_SESSION['login_user'])){
               include_once 'header-registrat.php';
