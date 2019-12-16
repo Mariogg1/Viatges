@@ -10,7 +10,10 @@
       <div class="col-md-6"></div>
       <div class="col-md-3">
         <div class="row">
-          <input type="text" id="myInput" placeholder="Search for names.." title="Type in a name">
+          <form action="buscador.php" method="POST">
+            <input type="text" name="palabra" placeholder="Cerca">
+            <input type="submit" name="buscador" value="Buscar">
+          </form>
         </div>
         <div class="row">
           

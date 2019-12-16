@@ -1,7 +1,7 @@
 <script src="js/login.js"></script>
 <?php
 
-if($_POST){
+if(isset($_POST['userName']) && isset($_POST['password'])){
 
     $userName = htmlspecialchars($_POST['userName']);
     $contrasenya = htmlspecialchars($_POST['password']);
