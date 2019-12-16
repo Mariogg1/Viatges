@@ -3,6 +3,8 @@
     <head>
       <meta charset="utf-8">
       <title><?php if(isset($title)) echo $title; ?></title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/png" href="logo/logo.png"/>
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
       <!-- Bootstrap -->

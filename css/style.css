@@ -1,12 +1,12 @@
 html{
   min-height: 100%;
   position: relative;
-  font-family: 'Quicksand', sans-serif;
 }
 
 body{
   margin: 0;
   margin-bottom: 200px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 header{
