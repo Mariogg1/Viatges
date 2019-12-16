@@ -21,9 +21,25 @@
       <div class="col-md-5">
         <h1>Llistat d'experiències</h1>
       </div>
-      <div class="col-md-5"></div>
-      <div class="col-md-2">
-        <select class="selector" form="categories">
+      <div class="col-md-3"></div>
+      <div class="col-md-4">
+        <select class="selector" onchange="filtrarLlistat(this.value)">
+          <option value disabled selected>Categories:</option>
+          <?php
+
+            include_once 'conexioBD.php';
+
+            $sql = "SELECT * FROM categories";
+
+            $resultats = mysqli_query($conexio, $sql);
+
+            foreach($resultats as $resultat){
+              echo "<option value='" . $resultat['id'] . "'>" . $resultat['nom'] . "</option>";
+            }
+
+          ?>
+        </select>
+        <select class="selector">
           <option value disabled selected>Llistar per:</option>
           <option value="data" id="data">Data</option>
           <option value="puntuacio" id="puntuacio">Puntuació</option>

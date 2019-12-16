@@ -14,6 +14,7 @@
       <!-- Scripts -->
       <script src="js/mostrar.js"></script>
       <script src="js/likes.js"></script>
+      <script src="js/filtrar.js"></script>
     </head>
     <body>
       <header>
