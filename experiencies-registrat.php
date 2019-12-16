@@ -42,7 +42,7 @@
 
           ?>
         </select>
-        <select class="selector">
+        <select class="selector" onchange="ordenar(this.value)">
           <option value disabled selected>Llistar per:</option>
           <option value="data" id="data">Data</option>
           <option value="puntuacio" id="puntuacio">Puntuació</option>

@@ -18,6 +18,7 @@
       <script src="js/likes.js"></script>
       <script src="js/filtrar.js"></script>
       <script src="js/buscador.js"></script>
+      <script src="js/ordenar.js"></script>
     </head>
     <body>
       <header>
