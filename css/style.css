@@ -94,6 +94,10 @@ footer{
   cursor: pointer;
 }
 
+.experiencia:hover{
+  transform:scale(1.05);
+}
+
 .btn-login-form{
   width: 100%;
 }
