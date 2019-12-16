@@ -39,7 +39,7 @@
         <?php
         include_once 'mostrar-experiencia.php';
         ?>
-        <button type="button" id="boton3" class="btn btn-primary" onclick="location.href='partUsuari.php'">Pagina d'usuari</button>
+        
         <!-- /END THE FEATURETTES -->
       </div>
     </div>

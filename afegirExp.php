@@ -67,7 +67,6 @@
                     </div>
                     <input type="submit" value="Afegir"></input>
                 </form>
-                <button type="button" id="boton3" class="btn btn-primary" onclick="location.href='index.php'">Tornar a la pagina d'inici</button>
             </div>
             <div class="col-md-4"></div>
         </div>
