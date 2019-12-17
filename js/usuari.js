@@ -25,7 +25,7 @@ function mostrarExp() {
     }
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("rowb").innerHTML = this.responseText;
+            document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
     xmlhttp.open("GET","experiencies.php",true);

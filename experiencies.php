@@ -1,43 +1,46 @@
-<div id="experiencia">
     <h1>Editar experiencies</h1>
     <?php
         include_once 'conexioBD.php';
     ?>
     <?php
-        if(!isset($_SESSION['login_user'])){
-            session_start();
-        }
-        $idUsuari=$_SESSION['login_user'];
+        session_start();
+        $nomUsuari = $_SESSION['login_user'];
+        $sql = "SELECT id FROM usuaris WHERE nomUsuari='$nomUsuari'";
 
-        $sSQL="SELECT * FROM experiencies WHERE idUsuari='$idUsuari'";
+        $resultats = mysqli_query($conexio, $sql);
+        
+        foreach($resultats as $resultat){
+            $idUsuari = $resultat['id'];
+        }
+
+        $sSQL="SELECT * FROM experiencies WHERE idUsuari=$idUsuari";
+
         $result=mysqli_query($conexio, $sSQL);
-        foreach($result as $resultat){
+        /*foreach($result as $resultat){
             $idUsuari=$resultat['idUsuari'];
             $titol=$resultat['titol'];
             $dataPublicacio=$resultat['dataPublicacio'];
             $text=$resultat['text'];
             $imatge=$resultat['imatge'];
             $idCategoria=$resultat['idCategoria'];
-        }
+        }*/
         foreach($result as $reesult){
-            if("idUsuari='$idUsuari'"){
-                echo "<hr class='featurette-divider'>" .
-                "<div class='row featurette experiencia' id=" . $reesult['id'] . ">" .
-                "<div class='col-md-7'>" .
-                "<h2 class='featurette-heading'>" .
-                $reesult['titol'] .
-                "</h2>
-                <p class='lead cortar-largo'>" .
-                $reesult['text'] . "</p>
-                </div>
-                <div class='col-md-5'>
-                <img src='img_experiencies/" . $reesult['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
-                </div>
-                </div>";
-            }
+            echo "<hr class='featurette-divider'>" .
+            "<div class='row featurette experiencia' id=" . $reesult['id'] . ">" .
+            "<div class='col-md-7'>" .
+            "<h2 class='featurette-heading'>" .
+            $reesult['titol'] .
+            "</h2>
+            <p class='lead cortar-largo'>" .
+            $reesult['text'] . "</p>
+            </div>
+            <div class='col-md-5'>
+            <img src='img_experiencies/" . $reesult['imatge'] . "' width='450' height='450' style='object-fit: cover'/>
+            </div>
+            </div>";
         }
     ?>
-        <form>
+        <!--<form>
             <input type="hidden" name="idUsuari" value="<?php echo $idUsuari?>"><br>
             <br>Titol:<br>
             <input type="text" name="titol" value="<?php echo $titol?>"><br>
@@ -51,4 +54,5 @@
             <input type="text" name="idCategoria" value="<?php echo $idCategoria?>"><br>
         </form>
         <button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>
+-->
 </div>
