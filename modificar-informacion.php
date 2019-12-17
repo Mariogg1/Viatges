@@ -1,3 +1,4 @@
+<div id="experiencia">
 <h1>Actualizar un registro</h1>
 <?php
     include_once 'conexioBD.php';
@@ -40,4 +41,5 @@
     <input type="text" name="correuElectronic" value="<?php echo $correuelectronic?>"><br>
     <input type="SUBMIT" value="Actualizar">
     </FORM>
+    <button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>
 </div>

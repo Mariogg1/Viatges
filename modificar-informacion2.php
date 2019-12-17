@@ -1,3 +1,4 @@
+<div id="experiencia">
 <?php
 include_once 'conexioBD.php';
 ?>
@@ -13,3 +14,5 @@ $sSQL="UPDATE usuaris SET nomUsuari='$nomUsuari', contrasenya='$contrasenya', no
 echo "S'ha actualitzat";
 mysqli_query($conexio, $sSQL);
 ?>
+<button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>
+</div>

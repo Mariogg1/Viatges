@@ -1,4 +1,4 @@
-<div>
+<div id="experiencia">
     <h1>Editar experiencies</h1>
     <?php
         include_once 'conexioBD.php';
@@ -50,4 +50,5 @@
             <br>idCategoria:<br>
             <input type="text" name="idCategoria" value="<?php echo $idCategoria?>"><br>
         </form>
+        <button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>
 </div>
