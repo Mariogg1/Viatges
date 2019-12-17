@@ -6,7 +6,7 @@ $param = $_GET['param'];
 
 if($param == "data"){
 
-    $sql ="SELECT * FROM experiencies ORDER BY dataPublicacio";
+    $sql ="SELECT * FROM experiencies ORDER BY dataPublicacio DESC";
     $experiencies = mysqli_query($conexio, $sql);
 
     $i = 0;
