@@ -3,10 +3,12 @@
     include_once 'conexioBD.php';
 
     if($_POST){
-        if(!empty($_POST['titol']) && !empty($_POST['text'])){
+        if(!empty($_POST['titol']) && !empty($_POST['text']) && !empty($_POST['categoria'])){
 
+            $usuari = $_POST['idUsuari'];
             $titol = htmlspecialchars($_POST['titol']);
             $text = htmlspecialchars($_POST['text']);
+            $categoria = $_POST['categoria'];
             $nomImg = basename($_FILES['imgExperiencia']['name']);
             
             $sqlComprovacioExistencia = "SELECT titol FROM experiencies WHERE titol = '$titol'";
@@ -20,7 +22,7 @@
                 }
 
                 //Pujar experiencia a la BD
-                $sql = "INSERT INTO experiencies(titol, text, imatge) VALUES('$titol', '$text', '$nomImg')";
+                $sql = "INSERT INTO experiencies(titol, text, imatge, idCategoria, idUsuari) VALUES('$titol', '$text', '$nomImg', $categoria, $usuari)";
     
                 if(!mysqli_query($conexio, $sql)){
                     echo "Error al inserir experiencia";
@@ -43,11 +45,23 @@
     <body>
     <?php 
         include_once 'declaracio.php';
+        include_once 'conexioBD.php';
+        session_start();
+        $nomUsuari = $_SESSION['login_user'];
+        $sql = "SELECT id FROM usuaris WHERE nomUsuari='$nomUsuari'";
+
+        $resultats = mysqli_query($conexio, $sql);
+        
+        foreach($resultats as $resultat){
+            $idUsuari = $resultat['id'];
+        }
+
     ?>
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="idUsuari" value="<?php echo $idUsuari?>">
                     <div class="form-group">
                         <label for="titol">Titol:</label>
                         <input type="text" class="form-control" name="titol">
@@ -58,7 +72,20 @@
                     </div>
                     <div class="form-group">
                         <label for="text">Text:</label>
-                        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                        <select class="selector form-control" name="categoria">
+                        <option value disabled selected>Categories:</option>
+                        <?php
+
+                            $sql = "SELECT * FROM categories";
+
+                            $resultats = mysqli_query($conexio, $sql);
+
+                            foreach($resultats as $resultat){
+                            echo "<option value='" . $resultat['id'] . "'>" . $resultat['nom'] . "</option>";
+                            }
+
+                        ?>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="img-experiencia">Imatge:</label>
