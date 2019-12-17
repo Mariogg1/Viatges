@@ -30,6 +30,7 @@ function mostrarLlistat() {
     }
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("experiencies-header").style.display="block";
             document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };

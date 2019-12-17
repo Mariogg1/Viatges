@@ -8,7 +8,8 @@ function mostrarModificacio() {
     }
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("rowb").innerHTML = this.responseText;
+            document.getElementById("experiencies-header").style.display="none";
+            document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
     xmlhttp.open("GET","modificar-informacion.php",true);
