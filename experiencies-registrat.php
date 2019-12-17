@@ -3,6 +3,7 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
   <div class="container marketing">
+  <div id=rowb>
     <div class="row">
       <div class="col-md-3">
         <button type="button" class="btn btn-primary" onclick="location.href='afegirExp.php'">Afegeix una experiencia</button>
@@ -63,5 +64,6 @@
       </div>
     </div>
   </div> 
+  </div>
   </body>
 </html>
