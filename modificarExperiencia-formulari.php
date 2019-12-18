@@ -22,14 +22,28 @@
         <input type="hidden" name="idUsuari" value="<?php echo $idUsuari?>"><br>
         <br>Titol:<br>
         <input type="text" name="titol" value="<?php echo $titol?>"><br>
-        <br>Data publicació:<br>
-        <input type="text" name="dataPublicacio" value="<?php echo $dataPublicacio?>"><br>
         <br>Text:<br>
-        <input type="text" name="text" value="<?php echo $text?>"><br>
-        <br>Imatge:<br>
-        <input type="text" name="imatge" value="<?php echo $imatge?>"><br>
-        <br>idCategoria:<br>
-        <input type="text" name="idCategoria" value="<?php echo $idCategoria?>"><br>
-        <button type='button' class='btn btn-primary' onclick='modificarExperiencia(this.form.elements.id.value, this.form.elements.idUsuari.value, this.form.elements.titol.value, this.form.elements.dataPublicacio.value, this.form.elements.text.value, this.form.elements.imatge.value, this.form.elements.idCategoria.value)'>Actualitza</button>
+        <textarea class="form-control" rows="5" name="text"><?php echo $text?></textarea><br>
+        <br>Categoria:<br>
+        <select class="selector form-control" name="categoria">
+            <option value disabled>Categoria:</option>
+            <?php
+
+                $sql = "SELECT * FROM categories";
+
+                $resultats = mysqli_query($conexio, $sql);
+
+                foreach($resultats as $resultat){
+                    if($resultat['id'] == $idCategoria){
+                        echo "<option value='" . $resultat['id'] . "' selected>" . $resultat['nom'] . "</option>";
+                    }else{
+                        echo "<option value='" . $resultat['id'] . "'>" . $resultat['nom'] . "</option>";
+                    }
+                }
+                
+
+            ?>
+        </select>
+        <button type='button' class='btn btn-primary' onclick='modificarExperiencia(this.form.elements.id.value, this.form.elements.idUsuari.value, this.form.elements.titol.value, this.form.elements.text.value, this.form.elements.categoria.value)'>Actualitza</button>
         <button type='button' class='btn btn-primary' onclick='eliminarExperiencia(this.form.elements.id.value)'>Eliminar experiència</button>
     </form>

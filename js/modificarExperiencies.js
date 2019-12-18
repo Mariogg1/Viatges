@@ -33,13 +33,11 @@ function modificarExperienciaFormulari(id) {
     xmlhttp.send();
 }
 
-function modificarExperiencia(id, idUsuari, titol, dataPublicacio, text, imatge, idCategoria) {
+function modificarExperiencia(id, idUsuari, titol, text, idCategoria) {
     $id=id;
     $idUsuari=idUsuari;
     $titol=titol;
-    $dataPublicacio=dataPublicacio;
     $text=text;
-    $imatge=imatge;
     $idCategoria=idCategoria;
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -53,7 +51,7 @@ function modificarExperiencia(id, idUsuari, titol, dataPublicacio, text, imatge,
             document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET","modificarExperiencia.php?id="+$id+"&idUsuari="+$idUsuari+"&titol="+$titol+"&dataPublicacio="+$dataPublicacio+"&text="+$text+"&imatge="+$imatge+"&idCategoria="+$idCategoria,true);
+    xmlhttp.open("GET","modificarExperiencia.php?id="+$id+"&idUsuari="+$idUsuari+"&titol="+$titol+"&text="+$text+"&idCategoria="+$idCategoria,true);
     xmlhttp.send();
 }
 

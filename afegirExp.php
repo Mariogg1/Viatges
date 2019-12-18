@@ -28,6 +28,9 @@
                     echo "Error al inserir experiencia";
                 }
             }
+
+            header("Location: index.php");
+
         }else{
             echo "Falten dades";
         }
@@ -71,7 +74,7 @@
                         <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="text">Text:</label>
+                        <label for="text">Categoria:</label>
                         <select class="selector form-control" name="categoria">
                         <option value disabled selected>Categories:</option>
                         <?php
