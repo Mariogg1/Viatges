@@ -89,5 +89,5 @@ if(!$_GET){
     }
 }
 ?>
-<button type="button" id="boton3" class="btn btn-primary" onclick="mostrarUsuari();">Pagina d'usuari</button>
+<button type="button" id="boton3" class="btn btn-primary" onclick="mostrarPaginaUsuari();">Pagina d'usuari</button>
 </div>

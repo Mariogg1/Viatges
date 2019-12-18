@@ -11,7 +11,6 @@ include_once 'conexioBD.php';
     $idCategoria=$_GET['idCategoria'];
 
 $sSQL="UPDATE experiencies SET idUsuari=$idUsuari, titol='$titol', dataPublicacio='$dataPublicacio', text='$text', imatge='$imatge', idCategoria=$idCategoria WHERE id=$id";
-echo $sSQL;
 if(!mysqli_query($conexio, $sSQL)) echo "false";
 ?>
 <button type='button' class='btn btn-primary' onclick='mostrarLlistat()'>Torna al llistat d'experiencies</button>
