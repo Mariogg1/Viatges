@@ -18,7 +18,7 @@
         $result=mysqli_query($conexio, $sSQL);
         foreach($result as $reesult){
             echo "<hr class='featurette-divider'>" .
-            "<div class='row featurette experiencia' id=" . $reesult['id'] ." onclick=modificarExperiencia(this.id);>" .
+            "<div class='row featurette experiencia' id=" . $reesult['id'] ." onclick=modificarExperienciaFormulari(this.id);>" .
             "<div class='col-md-7'>" .
             "<h2 class='featurette-heading'>" .
             $reesult['titol'] .

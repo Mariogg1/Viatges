@@ -30,5 +30,6 @@
         <input type="text" name="imatge" value="<?php echo $imatge?>"><br>
         <br>idCategoria:<br>
         <input type="text" name="idCategoria" value="<?php echo $idCategoria?>"><br>
-        <button type='button' class='btn btn-primary' onclick='actualitzarExperiencia(this.form.elements.id.value, this.form.elements.idUsuari.value, this.form.elements.titol.value, this.form.elements.dataPublicacio.value, this.form.elements.text.value, this.form.elements.imatge.value, this.form.elements.idCategoria.value)'>Actualitza</button>
+        <button type='button' class='btn btn-primary' onclick='modificarExperiencia(this.form.elements.id.value, this.form.elements.idUsuari.value, this.form.elements.titol.value, this.form.elements.dataPublicacio.value, this.form.elements.text.value, this.form.elements.imatge.value, this.form.elements.idCategoria.value)'>Actualitza</button>
+        <button type='button' class='btn btn-primary' onclick='eliminarExperiencia(this.form.elements.id.value)'>Eliminar experiència</button>
     </form>

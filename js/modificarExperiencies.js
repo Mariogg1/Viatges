@@ -1,4 +1,4 @@
-function mostrarFormulariModificacioExperiencies() {
+function mostrarExperienciesUsuari() {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -15,7 +15,7 @@ function mostrarFormulariModificacioExperiencies() {
     xmlhttp.send();
 }
 
-function modificarExperiencia(id) {
+function modificarExperienciaFormulari(id) {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -29,11 +29,11 @@ function modificarExperiencia(id) {
             document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET","modificar-experiencia.php?id="+id,true);
+    xmlhttp.open("GET","modificarExperiencia-formulari.php?id="+id,true);
     xmlhttp.send();
 }
 
-function actualitzarExperiencia(id, idUsuari, titol, dataPublicacio, text, imatge, idCategoria) {
+function modificarExperiencia(id, idUsuari, titol, dataPublicacio, text, imatge, idCategoria) {
     $id=id;
     $idUsuari=idUsuari;
     $titol=titol;
@@ -53,6 +53,24 @@ function actualitzarExperiencia(id, idUsuari, titol, dataPublicacio, text, imatg
             document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET","editexperiencia2.php?id="+$id+"&idUsuari="+$idUsuari+"&titol="+$titol+"&dataPublicacio="+$dataPublicacio+"&text="+$text+"&imatge="+$imatge+"&idCategoria="+$idCategoria,true);
+    xmlhttp.open("GET","modificarExperiencia.php?id="+$id+"&idUsuari="+$idUsuari+"&titol="+$titol+"&dataPublicacio="+$dataPublicacio+"&text="+$text+"&imatge="+$imatge+"&idCategoria="+$idCategoria,true);
+    xmlhttp.send();
+}
+
+function eliminarExperiencia(id){
+    $id = id;
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("experiencia").innerHTML = this.responseText;
+        }
+    };
+    xmlhttp.open("GET","eliminarExperiencia.php?id="+$id,true);
     xmlhttp.send();
 }
