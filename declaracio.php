@@ -19,8 +19,9 @@
       <script src="js/filtrar.js"></script>
       <script src="js/buscador.js"></script>
       <script src="js/ordenar.js"></script>
-      <script src="js/usuari.js"></script>
-      <script src="js/modificacion.js"></script>
+      <script src="js/mostrarPaginaUsuari.js"></script>
+      <script src="js/modificarUsuaris.js"></script>
+      <script src="js/modificarExperiencies.js"></script>
     </head>
     <body>
       <header>

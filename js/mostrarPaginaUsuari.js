@@ -1,4 +1,4 @@
-function mostrarModificacio() {
+function mostrarPaginaUsuari() {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -12,6 +12,6 @@ function mostrarModificacio() {
             document.getElementById("experiencia").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET","modificar-informacion.php",true);
+    xmlhttp.open("GET","partUsuari.php",true);
     xmlhttp.send();
 }
