@@ -27,6 +27,9 @@
                 ?>
             </div>
             <div class="row">
+                <button type="button" id="boton3" class="btn btn-primary" onclick="mostrarPaginaUsuari();">Pagina d'usuari</button>
+            </div>
+            <div class="row">
                 <a href="logout.php">Sortir</a> 
             </div>  
         </div>

@@ -14,7 +14,7 @@
                 "<img class='img-experiencia' src='img_experiencies/" . $experiencia['imatge'] . "' style='object-fit: cover'>
                 <h2>" . $experiencia['titol'] . "</h2>
                 <p class='cortar'>" . $experiencia['text'] . "</p>
-                <p><a class='btn btn-secondary' href='#' role='button'>Veure més</a></p>
+                <p><a class='btn btn-secondary' href='#' role='button' onclick='veureMes()'>Veure més</a></p>
                 </div>";
               }
             ?>

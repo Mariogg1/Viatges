@@ -13,6 +13,13 @@ header{
   margin-bottom: 20px;
 }
 
+#titol-header{
+  color: white;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 70px;
+}
+
 .benvinguda{
   color: white;
 }
@@ -72,6 +79,12 @@ footer{
   text-align: center;
   text-justify: inter-word;
   padding-bottom:70px;
+}
+
+#copyright{
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*buscador*/

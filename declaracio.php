@@ -22,6 +22,7 @@
       <script src="js/mostrarPaginaUsuari.js"></script>
       <script src="js/modificarUsuaris.js"></script>
       <script src="js/modificarExperiencies.js"></script>
+      <script src="js/alerts.js"></script>
     </head>
     <body>
       <header>
@@ -29,7 +30,9 @@
       <div class="col-md-2">
           <a href="index.php"><img src="logo/logo.png" class="logo"></a>
       </div>
-      <div class="col-md-7"></div>
+      <div class="col-md-7">
+        <h1 id="titol-header">Pedralbes Experiencies</h1>
+      </div>
         <?php 
           if(isset($_SESSION['login_user'])){
               include_once 'header-registrat.php';
